@@ -588,27 +588,12 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
+.absolute {
+  position: absolute;
 }
 
 .relative {
   position: relative;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
 }
 
 .mx-auto {
@@ -634,10 +619,6 @@ video {
 
 .h-\[500px\] {
   height: 500px;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .w-40 {
