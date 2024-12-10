@@ -7,21 +7,24 @@
     <link href="./src/output.css" rel="stylesheet" />
   </head>
   <body class="bg-slate-500  ">
+    <!-- Information -->
     <div class="container flex justify-between mx-auto">
       <h3 class="font-bold">
         Tên người chơi:
       </h3>
-      <p class="text-center font-bold" id="balanceText">Số dư: 500.000</p>
-       
-      <h3 class="font-bold ml-2" id="levelText">Level: 1, Rate: 1.7</h3>
+      <p class="text-center font-bold text-xl" id="balanceText">Số dư: 500.000</p>
+      <div>
+        <h3 class="font-bold ml-2" id="levelText">Level: 1, Rate: 1.7</h3>
+      </div>       
 
       
     </div>
+    <!-- game -->
     <div class="flex justify-center items-center">
         <div class=" lg:w-[1000px] lg:h-[500px]
         flex justify-between items-center
          bg-black rounded-r-full rounded-l-full relative">
-          <div id="tai" class="text-yellow-300 text-[90px] p-8 transform -translate-y-2 flex flex-col">TÀI
+          <div id="tai" class="text-yellow-300 text-[90px] lg:text-[120px] p-8 transform -translate-y-2 flex flex-col">TÀI
             <button id="taiButton" class="text-yellow-100 text-xl bg-yellow-600 rounded-lg uppercase">Đặt cược</button>
           </div>
           <div class="flex-col text-white justify-between items-center text-center">
@@ -33,27 +36,39 @@
             </div>
             <p class="text-xl text-center" id="textResult">TÀI HAY XỈU</p>
           </div>
-          <div id="xiu" class="flex-col flex text-white text-[90px] p-8 transform -translate-y-2">XỈU
+          <div id="xiu" class="flex-col flex text-white text-[90px] lg:text-[120px] p-8 transform -translate-y-2">XỈU
             <button id="xiuButton" class="text-yellow-100 text-xl bg-yellow-600 rounded-lg uppercase">Đặt cược</button>
           </div>
         </div>
     </div>
-    
+    <!-- Betting -->
+    <div class="flex justify-center items-center mt-2">
+      <span class="font-bold text-2xl">Current: </span>
+      <ul id="historyList" class="ml-2 flex gap-2">
+        <li class="p-4 bg-black w-2 h-2 rounded-full"></li>
+        <li class="p-4 bg-white w-2 h-2 rounded-full"></li>
+        <li class="p-4 bg-yellow-400 w-2 h-2 rounded-full"></li>
+      </ul>
+    </div>
     <div class="flex justify-center">
       <div class="mt-2">
         <div class="flex ">
           <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus1" onclick="resestBet()">Clear</button>
           <input type="number" id="countBet" class="rounded-md p-2 text-3xl h-12 w-40" min="0" value="0" >
-          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus1" onclick="addBetCount(1)">+1</button>
           <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus10" onclick="addBetCount(10)">+10</button>
           <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus100" onclick="addBetCount(100)">+100</button>
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus1" onclick="addBetCount(1000)">+1000</button>
           <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnSubHalf" onclick="subBetCount(0.5)">1/2</button>
           <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnSub2" onclick="subBetCount(2)">x2</button>
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnSub2" onclick="allIn()">All in</button>
         </div>
         
       </div>
     </div>
-
+    <div class="flex justify-center mt-4">
+      <img src="/src/images/prize_lv1.png" class="h-72" alt="" id="prizeImg">
+    </div>
     <script src="./src/main.js"></script>
+    <script src="https://kit.fontawesome.com/38926e5750.js" crossorigin="anonymous"></script>
   </body>
 </html>
