@@ -11,24 +11,25 @@
       <h3 class="font-bold">
         Tên người chơi:
       </h3>
-      <h3 class="font-bold" id="levelText">
-        Level: 1, Rate: 1.7
-      </h3>
+      <p class="text-center font-bold" id="balanceText">Số dư: 500.000</p>
+       
+      <h3 class="font-bold ml-2" id="levelText">Level: 1, Rate: 1.7</h3>
+
       
     </div>
     <div class="flex justify-center items-center">
-        <div class="w-[1000px]
+        <div class=" lg:w-[1000px] lg:h-[500px]
         flex justify-between items-center
-        h-[500px] bg-black rounded-r-full rounded-l-full relative">
+         bg-black rounded-r-full rounded-l-full relative">
           <div id="tai" class="text-yellow-300 text-[90px] p-8 transform -translate-y-2 flex flex-col">TÀI
             <button id="taiButton" class="text-yellow-100 text-xl bg-yellow-600 rounded-lg uppercase">Đặt cược</button>
           </div>
           <div class="flex-col text-white justify-between items-center text-center">
             <p class="text-2xl text-center">Mời đặt cược</p>
-            <div class="bg-white w-[300px] h-[300px] rounded-full relative">
-                <img src="./src/images/dice1.png" id="dice1" alt="" width="75px" class="absolute transform translate-y-16 translate-x-16">
-                <img src="./src/images/dice6.png" id="dice2" alt="" width="75px" class="absolute transform translate-y-16 translate-x-44">
-                <img src="./src/images/dice3.png" id="dice3" alt="" width="75px" class="absolute transform translate-y-40 translate-x-28">
+            <div class="bg-white w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full relative">
+                <img src="./src/images/dice1.png" id="dice1" alt="" class="w-[50px] lg:w-[75px] absolute transform lg:translate-y-16 lg:translate-x-16 translate-y-12 translate-x-10">
+                <img src="./src/images/dice6.png" id="dice2" alt="" class="w-[50px] lg:w-[75px] absolute transform lg:translate-y-16 lg:translate-x-44 translate-y-12 translate-x-28">
+                <img src="./src/images/dice3.png" id="dice3" alt="" class="w-[50px] lg:w-[75px] absolute transform lg:translate-y-40 lg:translate-x-28 translate-y-28 translate-x-20">
             </div>
             <p class="text-xl text-center" id="textResult">TÀI HAY XỈU</p>
           </div>
@@ -39,9 +40,17 @@
     </div>
     
     <div class="flex justify-center">
-      <div class="">
-        <input type="number" id="countBet" class="text-3xl mt-2 h-12 w-40" min="0" value="0">
-        <p class="text-center text-2xl font-bold" id="balanceText">Số dư: 500.000</p>
+      <div class="mt-2">
+        <div class="flex ">
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus1" onclick="resestBet()">Clear</button>
+          <input type="number" id="countBet" class="rounded-md p-2 text-3xl h-12 w-40" min="0" value="0" >
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus1" onclick="addBetCount(1)">+1</button>
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus10" onclick="addBetCount(10)">+10</button>
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnPlus100" onclick="addBetCount(100)">+100</button>
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnSubHalf" onclick="subBetCount(0.5)">1/2</button>
+          <button class="bg-gray-100 ml-1 px-2 font-bold m-1 rounded-md text-center" id="btnSub2" onclick="subBetCount(2)">x2</button>
+        </div>
+        
       </div>
     </div>
 

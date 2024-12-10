@@ -26,6 +26,22 @@ function updateBalance(){
         levelText.innerHTML = "Level DITMEVIPVAILON, Rate "+ rate;
     }
 }
+function addBetCount(bet){
+    currentBet = countBet.value*1;
+    currentBet+=bet;
+    countBet.value = currentBet;
+    console.log(currentBet);
+}
+function subBetCount(bet){
+    currentBet = countBet.value*1;
+    currentBet*=bet;
+    currentBet = Math.floor(currentBet);
+    countBet.value = currentBet;
+    console.log(currentBet);
+}
+function resestBet(){
+    countBet.value = 0;
+}
 function runBet(betOn){
     const bet = countBet.value;
     if(!bet || bet> balance){
@@ -76,4 +92,7 @@ function runBet(betOn){
 xiuButton.addEventListener("click", ()=>runBet(0));
 
 taiButton.addEventListener("click", ()=>runBet(1));
+
+
+
 updateBalance();
